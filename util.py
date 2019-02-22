@@ -43,7 +43,6 @@ DEFAULT_POST_HEADERS = {
 data = open("key.txt").readlines()
 ACCESS_KEY = data[0].strip()
 SECRET_KEY = data[1].strip()
-print (ACCESS_KEY,SECRET_KEY)
 
 # 首次运行可通过get_accounts()获取acct_id,然后直接赋值,减少重复获取。
 ACCOUNT_ID = None

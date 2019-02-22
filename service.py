@@ -409,4 +409,8 @@ def margin_balance(symbol):
 
 
 if __name__ == '__main__':
-    print get_accounts()
+    count = 2000
+    data = get_kline('btcusdt','1day',count)
+    data = str(data['data'])
+    file = open('data.txt','w+')
+    file.write(data)
