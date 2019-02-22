@@ -5,7 +5,7 @@
 # @QQ      : 375235513
 # @github  : https://github.com/KlausQIU
 
-from HuobiUtil import *
+from util import *
 
 '''
 Market data API
@@ -409,4 +409,4 @@ def margin_balance(symbol):
 
 
 if __name__ == '__main__':
-    print get_symbols()
+    print get_accounts()

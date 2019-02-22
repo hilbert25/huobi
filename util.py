@@ -41,9 +41,9 @@ DEFAULT_POST_HEADERS = {
 # 此处填写APIKEY
 
 data = open("key.txt").readlines()
-ACCESS_KEY = data[0]
-SECRET_KEY = data[1]
-
+ACCESS_KEY = data[0].strip()
+SECRET_KEY = data[1].strip()
+print (ACCESS_KEY,SECRET_KEY)
 
 # 首次运行可通过get_accounts()获取acct_id,然后直接赋值,减少重复获取。
 ACCOUNT_ID = None
@@ -103,7 +103,6 @@ def api_key_get(params, request_path):
     host_name = host_url = TRADE_URL
     host_name = urlparse.urlparse(host_url).hostname
     host_name = host_name.lower()
-
 
     params['Signature'] = createSign(params, method, host_name, request_path, SECRET_KEY)
     url = host_url + request_path
